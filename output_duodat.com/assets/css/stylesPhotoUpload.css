@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+label.file-label {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+label.file-label:hover {
+    background-color: #0056b3;
+}
+
+span[onclick] {
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.photos-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow the images to wrap to the next line */
+    justify-content: center;  /* Center the images */
+    gap: 10px;  /* Provide spacing between images */
+    margin-bottom: 20px;  /* Space between the images and the buttons */
+}
+
+.photos-container span {
+    margin: 5px;  /* Adjust as needed for spacing between images */
+    font-size: 12px;
+    /*
+    border: 2px solid #CCCCCC;
+    */
+}
+
+.photos-container span span {
+    border: none; /* Removes the border for inner span elements */
+}
+
+img {
+    max-width: 100%;  /* Images will scale down if they are too wide for their container */
+    border-radius: 4px;
+    height: auto;  /* Allow images to keep their original proportions */
+}
+
+/* Style for the button container */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+span[onclick] {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    /* ... Rest of the styles ... */
+}
+
+.photo-unit{
+    position: relative;
+    text-align: center;
+}
+
+#photoupload {
+    display: none;
+}
+
+
+#personTypeSelector {
+    padding: 10px 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+.disabled-button {
+    background-color: grey;
+    color: white;
+    font-weight: normal;
+}
+

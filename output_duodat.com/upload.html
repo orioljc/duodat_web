@@ -1,0 +1,14 @@
+<!doctype html><html><head><script src="./upload.bundle.js"></script><link rel="stylesheet" href="./assets/css/stylesPhotoUpload.css"><script>//var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; 
+		//var url = new URL(url_string);
+		url_string=window.location.href;
+		var url = new URL(url_string);
+		var album_id = url.searchParams.get("t");</script><script>function getHtml(template) {
+            return template.join("\n");
+        }
+
+        if ( album_id ) {
+    		viewAlbum(album_id);
+		}else{
+			console.log("Album ID not found!")
+			
+		}</script></head><body><div id="app"><h2>View and edit your photos below</h2><h3>Step 1</h3><p>Choose your gender (or the gender of the person in your pictures): <select id="personTypeSelector"><option value="person">None</option><option value="man">Man</option><option value="woman">Woman</option></select><br><br></p><div id="app2"></div><br><br><hr><h3>IMPORTANT! How should my uploaded images look like?</h3><ul><li><p>Make sure thre is only one person on each image</p></li><li><p>The face of the person should be clear and visible, and the person should be well recognizable</p></li><li><p>Both portraits and full body images are OK, but make sure the face is not too small</p></li><li><p>Pick the images you like the most since the AI output will be based on them</p></li><li><p>In general, more images (if good images) provides a better output, but different (number of) images will always produce different results</p></li></ul></div></body></html>

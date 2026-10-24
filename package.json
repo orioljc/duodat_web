@@ -1,0 +1,57 @@
+{
+  "name": "photogenerator",
+  "version": "1.0.0",
+  "description": "A browser-based Photo App demonstrating how to use the AWS SDK for JavaScript V3.",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack serve --config webpack.photogen-me.config.js --mode development",
+    "build": "webpack --config webpack.photogen-me.config.js --mode production"
+  },
+  "node": {
+    "fs": "empty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awsdocs/aws-doc-sdk-examples.git"
+  },
+  "author": "brmur, AllanFly120",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/awsdocs/aws-doc-sdk-examples/issues"
+  },
+  "homepage": "https://github.com/awsdocs/aws-doc-sdk-examples#readme",
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity": "^3.32.0",
+    "@aws-sdk/client-s3": "^3.32.0",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.32.0",
+    "fs": "0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "style-loader": "^3.3.3"
+  },
+  "devDependencies": {
+    "@aws-sdk/types": "^3.32.0",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.0.23",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "dotenv-webpack": "^8.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^26.4.2",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2",
+    "webpack": "^5.75.0",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ]
+}

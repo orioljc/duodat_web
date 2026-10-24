@@ -1,0 +1,5 @@
+upload_images_api_endpoint: /api_localhost/upload-images-localhost-oriol
+link_stripe_generic: https://buy.stripe.com/test_fZe2954dt2Ze8aAfYY
+link_stripe_christmas: https://buy.stripe.com/test_00gfZV7pF57mfD24gh
+link_stripe_birthday: https://buy.stripe.com/test_bIY151h0f9nC8aAcMP
+link_stripe_graduation: https://buy.stripe.com/test_aEUdRN5hxgQ48aAdQS

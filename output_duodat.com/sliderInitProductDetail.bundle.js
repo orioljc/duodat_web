@@ -1,0 +1,1 @@
+new Swiper(".swiper",{direction:"horizontal",loop:!0,effect:"cards",autoplay:{delay:4e3},hashNavigation:!1,pagination:{el:".swiper-pagination"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},scrollbar:{el:".swiper-scrollbar"}});
