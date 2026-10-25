@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /gracies/
+Disallow: /es/gracias/
+Disallow: /en/thank-you/
+
+Sitemap: https://duodat.com/sitemap.xml

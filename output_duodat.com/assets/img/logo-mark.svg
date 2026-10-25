@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Duodat">
+  <defs>
+    <linearGradient id="duodatMark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15949E"/>
+      <stop offset="0.55" stop-color="#0A5A66"/>
+      <stop offset="1" stop-color="#042B31"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#duodatMark)"/>
+  <circle cx="16.5" cy="24" r="4.6" fill="#fff"/>
+  <path d="M23.56 14.92a11.5 11.5 0 0 1 0 18.16" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M28.24 10.36a18 18 0 0 1 0 27.28" fill="none" stroke="#F6A94B" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

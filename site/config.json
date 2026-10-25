@@ -1,0 +1,29 @@
+{
+  "domain": "duodat.com",
+  "siteUrl": "https://duodat.com",
+  "brandName": "Duodat",
+  "email": "info@duodat.com",
+  "phone": "",
+  "defaultLocale": "ca",
+  "locales": ["ca", "es", "en"],
+  "company": {
+    "legalName": "Duodat",
+    "city": "Barcelona",
+    "country": "Espanya",
+    "vatId": ""
+  },
+  "form": {
+    "provider": "web3forms",
+    "accessKey": "40eab681-c0b0-4e5f-864a-ddf5bb6ca920",
+    "endpoint": "https://api.web3forms.com/submit"
+  },
+  "analytics": {
+    "gaMeasurementId": "",
+    "plausibleDomain": ""
+  },
+  "pricing": {
+    "wellbeingFrom": 19,
+    "businessFrom": 99,
+    "currency": "€"
+  }
+}
