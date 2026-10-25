@@ -30,9 +30,10 @@ module.exports = {
     allUseCases: 'Veure tots els casos d\'ús',
     learnMore: 'Com funciona',
     exampleCall: 'Exemple de trucada real',
-    demoDisclaimer: 'Exemple il·lustratiu d\'una conversa amb l\'agent.',
+    demoDisclaimer: 'Exemple il·lustratiu d\'una trucada amb l\'agent de veu.',
     agent: 'Agent Duodat',
     person: 'Persona',
+    transcript: 'Transcripció en directe',
     callLive: 'En curs'
   },
 
@@ -83,7 +84,7 @@ module.exports = {
       { icon: 'shield', text: 'Dades allotjades a la UE' },
       { icon: 'plug', text: 'Sense centraleta nova' }
     ],
-    heroNote: 'Estem obrint places per al programa pilot. Et contactem en 24 h laborables.',
+    heroNote: 'Demo gratuïta i sense compromís. Et contactem en 24 h laborables.',
 
     demo: {
       who: 'Montserrat, 83 anys',
@@ -214,8 +215,8 @@ module.exports = {
     ],
 
     pricingEyebrow: 'Preus',
-    pricingTitle: 'Preus orientatius del programa pilot',
-    pricingLead: 'Som a l\'inici i volem tancar els primers clients amb condicions de llançament. Aquests imports són una referència: el pressupost final depèn del volum de trucades i de les integracions.',
+    pricingTitle: 'Preus clars, sense sorpreses',
+    pricingLead: 'Pagues pel que fas servir, sense quotes d\'alta ni permanència. Aquests imports són el punt de partida: el pressupost final depèn del volum de trucades i de les integracions que vulguis connectar.',
     pricingPlans: [
       {
         name: 'Benestar',
@@ -246,7 +247,7 @@ module.exports = {
           'Escalada a una persona de l\'equip'
         ],
         featured: true,
-        flag: 'El més demanat',
+        flag: 'Recomanat',
         cta: 'Demana pressupost',
         useCase: 'confirmations'
       },
@@ -266,14 +267,14 @@ module.exports = {
         useCase: 'other'
       }
     ],
-    pricingNote: 'Imports en euros, sense IVA. Sense permanència durant el pilot.',
+    pricingNote: 'Imports en euros, sense IVA. Sense quota d\'alta ni permanència.',
 
     faqEyebrow: 'Preguntes freqüents',
     faqTitle: 'El que ens pregunta tothom',
     faq: [
       {
         q: 'La gent s\'adona que parla amb una màquina?',
-        a: 'Normalment sí, i no ho amaguem: l\'agent s\'identifica com a assistent automàtic al començament de la trucada. El que busquem no és enganyar ningú, sinó que la conversa sigui clara, educada i útil. En les proves, la majoria de persones ho accepten bé quan saben de part de qui es truca.'
+        a: 'Normalment sí, i no ho amaguem: l\'agent s\'identifica com a assistent automàtic al començament de la trucada. El que busquem no és enganyar ningú, sinó que la conversa sigui clara, educada i útil. Per això l\'agent diu sempre de part de qui truca: saber-ho canvia del tot com es rep la trucada.'
       },
       {
         q: 'Què passa si l\'agent no entén alguna cosa?',
@@ -301,17 +302,17 @@ module.exports = {
       },
       {
         q: 'Quant costa?',
-        a: 'Durant el pilot treballem amb preus de llançament des de 19 € al mes per a famílies i des de 99 € al mes per a negocis. El pressupost final depèn del volum de trucades i de les integracions que necessitis.'
+        a: 'Des de 19 € al mes per a famílies i des de 99 € al mes per a negocis. El pressupost final depèn del volum de trucades i de les integracions que necessitis, i te\'l donem tancat per escrit abans de començar.'
       }
     ],
 
-    finalEyebrow: 'Programa pilot',
+    finalEyebrow: 'Demana una demo',
     finalTitle: 'Expliquem-nos el teu cas i et preparem una demo',
     finalLead: 'Volem entendre com són les teves trucades abans de vendre\'t res. Omple el formulari i et contactem en 24 h laborables amb una proposta concreta o amb una demostració en viu.',
     finalPoints: [
       'Demostració amb un agent configurat per al teu cas',
       'Sense compromís ni targeta de crèdit',
-      'Condicions de llançament per als primers clients',
+      'Pressupost tancat per escrit abans de començar',
       'Si no et serveix, t\'ho direm clarament'
     ]
   },
@@ -403,7 +404,7 @@ module.exports = {
         'Reintents automàtics si no contesta',
         'Resum de cada trucada per correu electrònic',
         'Avís per SMS als contactes d\'emergència',
-        'Canvis de guió i d\'horari sense cost durant el pilot'
+        'Canvis de guió i d\'horari sense cost'
       ],
 
       notForItems: [
@@ -423,7 +424,7 @@ module.exports = {
         },
         {
           q: 'Puc canviar les preguntes?',
-          a: 'Sí. El guió és teu: pots afegir preguntes sobre medicació concreta, sobre si ha vingut la cuidadora o sobre qualsevol cosa que vulguis fer seguir. Durant el pilot els canvis no tenen cost.'
+          a: 'Sí. El guió és teu: pots afegir preguntes sobre medicació concreta, sobre si ha vingut la cuidadora o sobre qualsevol cosa que vulguis fer seguir. Els canvis de guió no tenen cost.'
         },
         {
           q: 'Es graven les trucades?',
@@ -831,8 +832,7 @@ module.exports = {
     colCompany: 'Duodat',
     colLegal: 'Legal',
     rights: 'Tots els drets reservats.',
-    madeIn: 'Fet a Barcelona',
-    statusPilot: 'Servei en fase pilot'
+    madeIn: 'Fet a Barcelona'
   },
 
   legalPages: {
@@ -860,7 +860,7 @@ module.exports = {
           head: ['Finalitat', 'Base jurídica', 'Conservació'],
           rows: [
             ['Respondre la teva sol·licitud d\'informació o de demostració', 'El teu consentiment i l\'interès legítim en atendre una consulta comercial', 'Fins a 24 mesos des de l\'últim contacte'],
-            ['Preparar un pressupost o una prova pilot', 'Execució d\'una relació precontractual', 'Durant la negociació i la seva prescripció legal'],
+            ['Preparar un pressupost o una prova del servei', 'Execució d\'una relació precontractual', 'Durant la negociació i la seva prescripció legal'],
             ['Complir obligacions legals (comptables, fiscals)', 'Obligació legal', 'Els terminis que exigeix la llei']
           ]
         } },
@@ -905,8 +905,8 @@ module.exports = {
         { h2: 'Objecte' },
         { p: 'Aquest lloc web té una finalitat informativa: presenta els serveis d\'agents de veu de Duodat i permet sol·licitar informació o una demostració a través d\'un formulari. L\'enviament del formulari no constitueix cap contracte ni cap obligació de prestació del servei.' },
 
-        { h2: 'Estat del servei' },
-        { p: 'Duodat es troba en fase de desenvolupament i de proves pilot. La informació d\'aquest lloc web descriu els serveis que oferim i les condicions previstes per al programa pilot. Les funcionalitats, els preus i els terminis indicats són orientatius i poden canviar; les condicions definitives seran les que es recullin en el contracte o pressupost signat amb cada client.' },
+        { h2: 'Abast de la informació' },
+        { p: 'La informació d\'aquest lloc web té caràcter comercial i descriptiu. Les funcionalitats, els preus i els terminis que s\'hi indiquen són orientatius i poden variar segons l\'abast de cada projecte; les condicions que vinculen les parts són únicament les que es recullin en el contracte o pressupost signat amb cada client.' },
 
         { h2: 'Preus indicats' },
         { p: 'Els preus que apareixen en aquest lloc web són orientatius, estan expressats en euros i no inclouen l\'IVA ni altres impostos aplicables. El preu final de cada servei depèn del volum de trucades, de les integracions necessàries i de l\'abast acordat, i es confirma sempre per escrit en un pressupost.' },

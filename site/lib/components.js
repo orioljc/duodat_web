@@ -192,23 +192,76 @@ function footer(ctx) {
 
 /* ------------------------------------------------------------ call card --- */
 
+/**
+ * A voice call, not a chat thread: live-call chrome, an audio waveform and a
+ * timestamped transcript in a single column. Turn timestamps are derived from
+ * how much each speaker says, scaled to the call length in `demo.meta`.
+ */
 function callCard(ctx, demo, opts) {
   const L = ctx.locale;
   const o = opts || {};
-  const turns = demo.turns.map(function (turn) {
-    const who = turn.s === 'agent' ? L.ui.agent : L.ui.person;
-    return '<div class="bubble bubble--' + (turn.s === 'agent' ? 'agent' : 'human') + '">' +
-      '<span class="bubble__who">' + esc(who) + '</span>' + esc(turn.t) + '</div>';
+
+  // Call length, read from the meta line ("… · 1 min 48 s").
+  const matched = /(\d+)\s*min\s*(\d+)/.exec(demo.meta);
+  const totalSec = matched ? Number(matched[1]) * 60 + Number(matched[2]) : 90;
+
+  const clock = function (seconds) {
+    const mm = Math.floor(seconds / 60);
+    const ss = Math.round(seconds % 60);
+    return mm + ':' + (ss < 10 ? '0' : '') + ss;
+  };
+
+  // Longer utterances take longer to say, so weight start times by length.
+  const weights = demo.turns.map(function (turn) { return Math.max(turn.t.length, 24); });
+  const totalWeight = weights.reduce(function (a, b) { return a + b; }, 0);
+  let acc = 0;
+  const starts = weights.map(function (w) {
+    const at = (acc / totalWeight) * totalSec * 0.94;
+    acc += w;
+    return at;
+  });
+
+  const turns = demo.turns.map(function (turn, i) {
+    const isAgent = turn.s === 'agent';
+    return '<li class="turn turn--' + (isAgent ? 'agent' : 'human') + '">' +
+      '<span class="turn__time">' + clock(starts[i]) + '</span>' +
+      '<div class="turn__body">' +
+        '<span class="turn__who">' + esc(isAgent ? L.ui.agent : L.ui.person) +
+          (isAgent ? '<span class="waves waves--mini" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>' : '') +
+        '</span>' +
+        '<p>' + esc(turn.t) + '</p>' +
+      '</div>' +
+    '</li>';
   }).join('');
+
+  // Deterministic but card-specific waveform.
+  const seed = demo.who.length % 7;
+  let bars = '';
+  for (let i = 0; i < 46; i++) {
+    const a = 0.5 + 0.5 * Math.sin((i + seed) * 0.92);
+    const b = 0.45 + 0.55 * Math.abs(Math.sin((i + seed) * 0.37 + 1.2));
+    const h = Math.round(14 + 86 * a * b);
+    bars += '<i style="height:' + h + '%"></i>';
+  }
 
   return '<figure class="callcard' + (o.className ? ' ' + o.className : '') + '" role="group" aria-label="' + esc(L.ui.exampleCall) + '">' +
     '<div class="callcard__top">' +
-      '<span class="callcard__avatar">' + icon('phone', 18, 2) + '</span>' +
-      '<span><span class="callcard__who">' + esc(demo.who) + '</span>' +
-        '<span class="callcard__meta">' + esc(demo.meta) + '</span></span>' +
+      '<span class="callcard__avatar">' + icon('phone', 20, 2) + '</span>' +
+      '<span class="callcard__id">' +
+        '<span class="callcard__who">' + esc(demo.who) + '</span>' +
+        // Only the call type: the duration lives in the audio band, and a past
+        // date would contradict the "in progress" badge.
+        '<span class="callcard__meta">' + esc(demo.meta.split(' · ')[0]) + '</span>' +
+      '</span>' +
       '<span class="callcard__live"><i></i>' + esc(L.ui.callLive) + '</span>' +
     '</div>' +
-    '<div class="callcard__body">' + turns + '</div>' +
+    '<div class="callcard__audio">' +
+      '<span class="callcard__speaker">' + icon('volume', 16, 2) + '</span>' +
+      '<span class="callcard__wave" aria-hidden="true">' + bars + '</span>' +
+      '<span class="callcard__elapsed">' + clock(totalSec) + '</span>' +
+    '</div>' +
+    '<p class="callcard__label">' + icon('file-text', 14, 2) + esc(L.ui.transcript) + '</p>' +
+    '<ol class="callcard__body">' + turns + '</ol>' +
     '<figcaption class="callcard__foot">' + icon('check-circle', 18, 1.8) +
       '<span>' + esc(demo.foot) + '</span></figcaption>' +
   '</figure>';

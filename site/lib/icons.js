@@ -35,7 +35,9 @@ const PATHS = {
   'chevron-down': '<path d="M6 9.5l6 6 6-6"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="0.9" fill="currentColor" stroke="none"/>',
-  send: '<path d="M20.5 3.5L10.5 13.5M20.5 3.5l-6.5 17-3.5-7-7-3.5 17-6.5z"/>'
+  send: '<path d="M20.5 3.5L10.5 13.5M20.5 3.5l-6.5 17-3.5-7-7-3.5 17-6.5z"/>',
+  volume: '<path d="M11 4.8L6.4 8.8H3.3v6.4h3.1L11 19.2V4.8z"/><path d="M14.8 9.4a3.6 3.6 0 0 1 0 5.2M17.6 6.8a7.3 7.3 0 0 1 0 10.4"/>',
+  mic: '<rect x="9.2" y="3" width="5.6" height="11" rx="2.8"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3"/>'
 };
 
 /**

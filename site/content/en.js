@@ -30,9 +30,10 @@ module.exports = {
     allUseCases: 'See all use cases',
     learnMore: 'How it works',
     exampleCall: 'Example of a real call',
-    demoDisclaimer: 'Illustrative example of a conversation with the agent.',
+    demoDisclaimer: 'Illustrative example of a call with the voice agent.',
     agent: 'Duodat agent',
     person: 'Person',
+    transcript: 'Live transcript',
     callLive: 'Live'
   },
 
@@ -83,7 +84,7 @@ module.exports = {
       { icon: 'shield', text: 'Data hosted in the EU' },
       { icon: 'plug', text: 'No new phone system' }
     ],
-    heroNote: 'We are opening places in our pilot programme. We reply within one working day.',
+    heroNote: 'Free demo, no commitment. We reply within one working day.',
 
     demo: {
       who: 'Margaret, 83',
@@ -214,8 +215,8 @@ module.exports = {
     ],
 
     pricingEyebrow: 'Pricing',
-    pricingTitle: 'Indicative pilot programme pricing',
-    pricingLead: 'We are at the beginning and we want to sign our first customers on launch terms. These figures are a reference point: the final quote depends on call volume and integrations.',
+    pricingTitle: 'Clear pricing, no surprises',
+    pricingLead: 'You pay for what you use, with no setup fee and no lock-in. These figures are the starting point: the final quote depends on call volume and on the integrations you want connected.',
     pricingPlans: [
       {
         name: 'Wellbeing',
@@ -246,7 +247,7 @@ module.exports = {
           'Escalation to someone on your team'
         ],
         featured: true,
-        flag: 'Most requested',
+        flag: 'Recommended',
         cta: 'Request a quote',
         useCase: 'confirmations'
       },
@@ -266,14 +267,14 @@ module.exports = {
         useCase: 'other'
       }
     ],
-    pricingNote: 'Amounts in euros, excluding VAT. No lock-in during the pilot.',
+    pricingNote: 'Amounts in euros, excluding VAT. No setup fee and no lock-in.',
 
     faqEyebrow: 'Frequently asked questions',
     faqTitle: 'What everyone asks us',
     faq: [
       {
         q: 'Do people realise they are talking to a machine?',
-        a: 'Usually yes, and we do not hide it: the agent introduces itself as an automated assistant at the start of the call. The goal is not to fool anyone, but to make the conversation clear, polite and useful. In our tests, most people are comfortable with it once they know who the call is on behalf of.'
+        a: 'Usually yes, and we do not hide it: the agent introduces itself as an automated assistant at the start of the call. The goal is not to fool anyone, but to make the conversation clear, polite and useful. That is why the agent always says who it is calling on behalf of: knowing that completely changes how the call lands.'
       },
       {
         q: 'What happens if the agent does not understand something?',
@@ -301,17 +302,17 @@ module.exports = {
       },
       {
         q: 'How much does it cost?',
-        a: 'During the pilot we work with launch pricing from €19 per month for families and from €99 per month for businesses. The final quote depends on call volume and on the integrations you need.'
+        a: 'From €19 per month for families and from €99 per month for businesses. The final quote depends on call volume and on the integrations you need, and we give it to you in writing before anything starts.'
       }
     ],
 
-    finalEyebrow: 'Pilot programme',
+    finalEyebrow: 'Book a demo',
     finalTitle: 'Tell us about your case and we will prepare a demo',
     finalLead: 'We want to understand what your calls look like before selling you anything. Fill in the form and we will get back to you within one working day with a concrete proposal or a live demo.',
     finalPoints: [
       'A demo with an agent configured for your case',
       'No commitment and no credit card',
-      'Launch terms for our first customers',
+      'A fixed written quote before anything starts',
       'If it is not a fit, we will say so plainly'
     ]
   },
@@ -403,7 +404,7 @@ module.exports = {
         'Automatic retries if there is no answer',
         'A summary of every call by email',
         'SMS alerts to emergency contacts',
-        'Script and schedule changes at no cost during the pilot'
+        'Script and schedule changes at no cost'
       ],
 
       notForItems: [
@@ -423,7 +424,7 @@ module.exports = {
         },
         {
           q: 'Can I change the questions?',
-          a: 'Yes. The script is yours: you can add questions about specific medication, about whether the carer turned up, or about anything else you want tracked. Changes are free during the pilot.'
+          a: 'Yes. The script is yours: you can add questions about specific medication, about whether the carer turned up, or about anything else you want tracked. Script changes are free.'
         },
         {
           q: 'Are calls recorded?',
@@ -831,8 +832,7 @@ module.exports = {
     colCompany: 'Duodat',
     colLegal: 'Legal',
     rights: 'All rights reserved.',
-    madeIn: 'Made in Barcelona',
-    statusPilot: 'Service in pilot phase'
+    madeIn: 'Made in Barcelona'
   },
 
   legalPages: {
@@ -860,7 +860,7 @@ module.exports = {
           head: ['Purpose', 'Legal basis', 'Retention'],
           rows: [
             ['Responding to your request for information or a demo', 'Your consent and our legitimate interest in answering a business enquiry', 'Up to 24 months from the last contact'],
-            ['Preparing a quote or a pilot trial', 'Performance of a pre-contractual relationship', 'For the duration of the negotiation and its statutory limitation period'],
+            ['Preparing a quote or a trial of the service', 'Performance of a pre-contractual relationship', 'For the duration of the negotiation and its statutory limitation period'],
             ['Meeting legal obligations (accounting, tax)', 'Legal obligation', 'The periods required by law']
           ]
         } },
@@ -905,8 +905,8 @@ module.exports = {
         { h2: 'Purpose' },
         { p: 'This website is informational: it presents Duodat\'s voice agent services and allows you to request information or a demo through a form. Submitting the form does not create a contract or any obligation to provide the service.' },
 
-        { h2: 'Service status' },
-        { p: 'Duodat is in development and pilot testing. The information on this website describes the services we offer and the terms planned for the pilot programme. The features, prices and timescales shown are indicative and may change; the binding terms will be those set out in the contract or quote signed with each customer.' },
+        { h2: 'Scope of the information' },
+        { p: 'The information on this website is commercial and descriptive in nature. The features, prices and timescales shown are indicative and may vary with the scope of each project; the terms binding on the parties are solely those set out in the contract or quote signed with each customer.' },
 
         { h2: 'Prices shown' },
         { p: 'The prices shown on this website are indicative, are expressed in euros and exclude VAT and any other applicable taxes. The final price of each service depends on call volume, the integrations required and the agreed scope, and is always confirmed in writing in a quote.' },

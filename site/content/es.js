@@ -30,9 +30,10 @@ module.exports = {
     allUseCases: 'Ver todos los casos de uso',
     learnMore: 'Cómo funciona',
     exampleCall: 'Ejemplo de llamada real',
-    demoDisclaimer: 'Ejemplo ilustrativo de una conversación con el agente.',
+    demoDisclaimer: 'Ejemplo ilustrativo de una llamada con el agente de voz.',
     agent: 'Agente Duodat',
     person: 'Persona',
+    transcript: 'Transcripción en directo',
     callLive: 'En curso'
   },
 
@@ -83,7 +84,7 @@ module.exports = {
       { icon: 'shield', text: 'Datos alojados en la UE' },
       { icon: 'plug', text: 'Sin centralita nueva' }
     ],
-    heroNote: 'Estamos abriendo plazas para el programa piloto. Te contactamos en 24 h laborables.',
+    heroNote: 'Demo gratuita y sin compromiso. Te contactamos en 24 h laborables.',
 
     demo: {
       who: 'Montserrat, 83 años',
@@ -214,8 +215,8 @@ module.exports = {
     ],
 
     pricingEyebrow: 'Precios',
-    pricingTitle: 'Precios orientativos del programa piloto',
-    pricingLead: 'Estamos empezando y queremos cerrar los primeros clientes con condiciones de lanzamiento. Estos importes son una referencia: el presupuesto final depende del volumen de llamadas y de las integraciones.',
+    pricingTitle: 'Precios claros, sin sorpresas',
+    pricingLead: 'Pagas por lo que usas, sin cuota de alta ni permanencia. Estos importes son el punto de partida: el presupuesto final depende del volumen de llamadas y de las integraciones que quieras conectar.',
     pricingPlans: [
       {
         name: 'Bienestar',
@@ -246,7 +247,7 @@ module.exports = {
           'Escalado a una persona del equipo'
         ],
         featured: true,
-        flag: 'El más pedido',
+        flag: 'Recomendado',
         cta: 'Pide presupuesto',
         useCase: 'confirmations'
       },
@@ -266,14 +267,14 @@ module.exports = {
         useCase: 'other'
       }
     ],
-    pricingNote: 'Importes en euros, sin IVA. Sin permanencia durante el piloto.',
+    pricingNote: 'Importes en euros, sin IVA. Sin cuota de alta ni permanencia.',
 
     faqEyebrow: 'Preguntas frecuentes',
     faqTitle: 'Lo que nos pregunta todo el mundo',
     faq: [
       {
         q: '¿La gente se da cuenta de que habla con una máquina?',
-        a: 'Normalmente sí, y no lo escondemos: el agente se identifica como asistente automático al principio de la llamada. Lo que buscamos no es engañar a nadie, sino que la conversación sea clara, educada y útil. En las pruebas, la mayoría de personas lo aceptan bien cuando saben de parte de quién se llama.'
+        a: 'Normalmente sí, y no lo escondemos: el agente se identifica como asistente automático al principio de la llamada. Lo que buscamos no es engañar a nadie, sino que la conversación sea clara, educada y útil. Por eso el agente dice siempre de parte de quién llama: saberlo cambia por completo cómo se recibe la llamada.'
       },
       {
         q: '¿Qué pasa si el agente no entiende algo?',
@@ -301,17 +302,17 @@ module.exports = {
       },
       {
         q: '¿Cuánto cuesta?',
-        a: 'Durante el piloto trabajamos con precios de lanzamiento desde 19 € al mes para familias y desde 99 € al mes para negocios. El presupuesto final depende del volumen de llamadas y de las integraciones que necesites.'
+        a: 'Desde 19 € al mes para familias y desde 99 € al mes para negocios. El presupuesto final depende del volumen de llamadas y de las integraciones que necesites, y te lo damos cerrado por escrito antes de empezar.'
       }
     ],
 
-    finalEyebrow: 'Programa piloto',
+    finalEyebrow: 'Pide una demo',
     finalTitle: 'Cuéntanos tu caso y te preparamos una demo',
     finalLead: 'Queremos entender cómo son tus llamadas antes de venderte nada. Rellena el formulario y te contactamos en 24 h laborables con una propuesta concreta o con una demostración en vivo.',
     finalPoints: [
       'Demostración con un agente configurado para tu caso',
       'Sin compromiso ni tarjeta de crédito',
-      'Condiciones de lanzamiento para los primeros clientes',
+      'Presupuesto cerrado por escrito antes de empezar',
       'Si no te sirve, te lo diremos claramente'
     ]
   },
@@ -403,7 +404,7 @@ module.exports = {
         'Reintentos automáticos si no contesta',
         'Resumen de cada llamada por correo electrónico',
         'Aviso por SMS a los contactos de emergencia',
-        'Cambios de guion y de horario sin coste durante el piloto'
+        'Cambios de guion y de horario sin coste'
       ],
 
       notForItems: [
@@ -423,7 +424,7 @@ module.exports = {
         },
         {
           q: '¿Puedo cambiar las preguntas?',
-          a: 'Sí. El guion es tuyo: puedes añadir preguntas sobre medicación concreta, sobre si ha venido la cuidadora o sobre cualquier cosa que quieras seguir. Durante el piloto los cambios no tienen coste.'
+          a: 'Sí. El guion es tuyo: puedes añadir preguntas sobre medicación concreta, sobre si ha venido la cuidadora o sobre cualquier cosa que quieras seguir. Los cambios de guion no tienen coste.'
         },
         {
           q: '¿Se graban las llamadas?',
@@ -831,8 +832,7 @@ module.exports = {
     colCompany: 'Duodat',
     colLegal: 'Legal',
     rights: 'Todos los derechos reservados.',
-    madeIn: 'Hecho en Barcelona',
-    statusPilot: 'Servicio en fase piloto'
+    madeIn: 'Hecho en Barcelona'
   },
 
   legalPages: {
@@ -860,7 +860,7 @@ module.exports = {
           head: ['Finalidad', 'Base jurídica', 'Conservación'],
           rows: [
             ['Responder a tu solicitud de información o de demostración', 'Tu consentimiento y el interés legítimo en atender una consulta comercial', 'Hasta 24 meses desde el último contacto'],
-            ['Preparar un presupuesto o una prueba piloto', 'Ejecución de una relación precontractual', 'Durante la negociación y su prescripción legal'],
+            ['Preparar un presupuesto o una prueba del servicio', 'Ejecución de una relación precontractual', 'Durante la negociación y su prescripción legal'],
             ['Cumplir obligaciones legales (contables, fiscales)', 'Obligación legal', 'Los plazos que exige la ley']
           ]
         } },
@@ -905,8 +905,8 @@ module.exports = {
         { h2: 'Objeto' },
         { p: 'Este sitio web tiene una finalidad informativa: presenta los servicios de agentes de voz de Duodat y permite solicitar información o una demostración a través de un formulario. El envío del formulario no constituye ningún contrato ni ninguna obligación de prestación del servicio.' },
 
-        { h2: 'Estado del servicio' },
-        { p: 'Duodat se encuentra en fase de desarrollo y de pruebas piloto. La información de este sitio web describe los servicios que ofrecemos y las condiciones previstas para el programa piloto. Las funcionalidades, los precios y los plazos indicados son orientativos y pueden cambiar; las condiciones definitivas serán las que se recojan en el contrato o presupuesto firmado con cada cliente.' },
+        { h2: 'Alcance de la información' },
+        { p: 'La información de este sitio web tiene carácter comercial y descriptivo. Las funcionalidades, los precios y los plazos que se indican son orientativos y pueden variar según el alcance de cada proyecto; las condiciones que vinculan a las partes son únicamente las que se recojan en el contrato o presupuesto firmado con cada cliente.' },
 
         { h2: 'Precios indicados' },
         { p: 'Los precios que aparecen en este sitio web son orientativos, están expresados en euros y no incluyen el IVA ni otros impuestos aplicables. El precio final de cada servicio depende del volumen de llamadas, de las integraciones necesarias y del alcance acordado, y se confirma siempre por escrito en un presupuesto.' },
